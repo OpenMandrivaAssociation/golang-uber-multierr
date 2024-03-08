@@ -18,6 +18,9 @@ License:	MIT
 Group:		Development/Other
 BuildRequires:	compiler(go-compiler)
 BuildArch:	noarch
+%if %{with check}
+BuildRequires:	golang(github.com/stretchr/testify/assert)
+%endif
 
 %description
 Combine one or more Go errors together.
